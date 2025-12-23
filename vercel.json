@@ -7,8 +7,8 @@
   ],
   "redirects": [
     {
-      "source": "/:path*",
-      "destination": "https://app.settleup.pro/:path*",
+      "source": "/((?!.well-known).*)",
+      "destination": "https://app.settleup.pro/$1",
       "permanent": false
     }
   ]
