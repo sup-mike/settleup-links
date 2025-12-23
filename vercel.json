@@ -1,15 +1,14 @@
 {
   "rewrites": [
-    {
-      "source": "/.well-known/apple-app-site-association",
-      "destination": "/api/well-known/apple-app-site-association"
-    }
+    { "source": "/.well-known/:path*", "destination": "/api/well-known/:path*" },
+    { "source": "/auth/callback", "destination": "/api/auth-callback" },
+    { "source": "/stripe/:path*", "destination": "/api/stripe/:path*" }
   ],
   "redirects": [
-    {
-      "source": "/((?!.well-known).*)",
+    { 
+      "source": "/((?!.well-known|auth/callback|stripe).*)", 
       "destination": "https://app.settleup.pro/$1",
-      "permanent": false
+      "permanent": false 
     }
   ]
 }
