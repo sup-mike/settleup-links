@@ -4,17 +4,11 @@
     "details": [
       {
         "appID": "724QTT2WG3.pro.settleup.app",
-        "paths": [
-          "/callback",
-          "/stripe/complete",
-          "/stripe/refresh"
-        ]
+        "paths": ["/callback", "/stripe/complete", "/stripe/refresh"]
       }
     ]
   },
   "webcredentials": {
-    "apps": [
-      "724QTT2WG3.pro.settleup.app"
-    ]
+    "apps": ["724QTT2WG3.pro.settleup.app"]
   }
 }
