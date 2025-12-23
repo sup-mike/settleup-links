@@ -1,3 +1,4 @@
+// api/well-known/apple-app-site-association.js
 export default function handler(req, res) {
   const aasa = {
     applinks: {
@@ -5,7 +6,12 @@ export default function handler(req, res) {
       details: [
         {
           appID: "724QTT2WG3.pro.settleup.app",
-          paths: ["/callback", "/stripe/complete", "/stripe/refresh"]
+          paths: [
+            "/",
+            "/callback",
+            "/stripe/complete",
+            "/stripe/refresh"
+          ]
         }
       ]
     },
@@ -13,8 +19,4 @@ export default function handler(req, res) {
       apps: ["724QTT2WG3.pro.settleup.app"]
     }
   };
-
-  res.setHeader('Content-Type', 'application/json');
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.status(200).json(aasa);
 }
