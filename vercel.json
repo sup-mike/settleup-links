@@ -4,5 +4,12 @@
       "source": "/.well-known/apple-app-site-association",
       "destination": "/api/well-known/apple-app-site-association"
     }
+  ],
+  "redirects": [
+    {
+      "source": "/:path*",
+      "destination": "https://app.settleup.pro/:path*",
+      "permanent": false
+    }
   ]
 }
