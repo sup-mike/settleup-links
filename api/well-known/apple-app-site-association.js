@@ -18,4 +18,6 @@ export default function handler(req, res) {
       apps: ["724QTT2WG3.pro.settleup.app"]
     }
   };
+  res.setHeader('Content-Type', 'application/json');
+  return res.status(200).json(aasa);
 }
