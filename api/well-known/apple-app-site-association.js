@@ -8,7 +8,6 @@ export default function handler(req, res) {
           appID: "724QTT2WG3.pro.settleup.app",
           paths: [
             "/",
-            "/callback",
             "/stripe/complete",
             "/stripe/refresh"
           ]
