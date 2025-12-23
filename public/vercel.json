@@ -2,16 +2,7 @@
   "rewrites": [
     {
       "source": "/.well-known/apple-app-site-association",
-      "destination": "/well-known/apple-app-site-association"
-    }
-  ],
-  "headers": [
-    {
-      "source": "/.well-known/apple-app-site-association",
-      "headers": [
-        { "key": "Content-Type", "value": "application/json" },
-        { "key": "Access-Control-Allow-Origin", "value": "*" }
-      ]
+      "destination": "/api/well-known/apple-app-site-association"
     }
   ]
 }
