@@ -1,5 +1,4 @@
 // api/well-known/apple-app-site-association.js
-
 export default function handler(req, res) {
   const aasa = {
     applinks: {
