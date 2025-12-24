@@ -1,10 +1,6 @@
 // api/auth-callback.js
 
 export default function handler(req, res) {
-  // Get the full URL with hash/query params
-  const query = req.url.includes('?') ? req.url.split('?')[1] : '';
-  
-  // HTML that attempts app deep link, then falls back to web
   const html = `
     <!DOCTYPE html>
     <html>
@@ -18,12 +14,19 @@ export default function handler(req, res) {
       <script>
         const params = window.location.search + window.location.hash;
         
-        // Try custom scheme for app
-        window.location.href = 'settleup://auth/callback' + params;
+        // Use the same format as Stripe deep links
+        const deepLink = 'settleup://app.settleup.pro/auth/callback' + params;
+        
+        // Use anchor click method (works better in some browsers)
+        const link = document.createElement('a');
+        link.href = deepLink;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
         
         // Fallback to web app after 2 seconds
         setTimeout(() => {
-          window.location.href = 'https://app.settleup.pro' + params;
+          window.location.href = 'https://app.settleup.pro/auth/callback' + params;
         }, 2000);
       </script>
     </body>
