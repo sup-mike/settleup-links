@@ -1,4 +1,5 @@
 // api/well-known/apple-app-site-association.js
+
 export default function handler(req, res) {
   const aasa = {
     applinks: {
@@ -9,8 +10,7 @@ export default function handler(req, res) {
           paths: [
             "/",
             "/stripe/complete",
-            "/stripe/refresh",
-            "/auth/callback"
+            "/stripe/refresh"
           ]
         }
       ]
