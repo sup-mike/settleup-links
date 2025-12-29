@@ -6,6 +6,6 @@ export default function handler(req, res) {
   const deepLinkUrl = `settleup://app.settleup.pro/${queryString ? '?' + queryString : ''}`;
   
   // IMPORTANT: Use 302 redirect, not HTML/JavaScript
-  res.setHeader('Location', deepLink);
+  res.setHeader('Location', deepLinkUrl);  // ✅ Correct variable name
   return res.status(302).end();
 }
