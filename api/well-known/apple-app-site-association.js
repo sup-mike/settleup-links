@@ -9,7 +9,8 @@ export default function handler(req, res) {
           paths: [
             "/",
             "/stripe/complete",
-            "/stripe/refresh"
+            "/stripe/refresh",
+            "/reset"
           ]
         }
       ]
