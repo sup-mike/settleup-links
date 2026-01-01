@@ -10,7 +10,8 @@ export default function handler(req, res) {
             "/",
             "/stripe/complete",
             "/stripe/refresh",
-            "/reset"
+            "/reset",
+            "/login"
           ]
         }
       ]
